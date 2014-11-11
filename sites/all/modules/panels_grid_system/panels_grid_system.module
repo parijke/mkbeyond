@@ -1,0 +1,89 @@
+<?php
+/**
+ * @file
+ * Module file for panels grid system module.
+ *
+ * Most of the fun is in the style and layout folders.
+ */
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function panels_grid_system_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'panels') {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Implements hook_init().
+ */
+function panels_grid_system_init() {
+  // Add js and CSS specific to Panels In-place-editor if the user has access.
+  if (user_access('use panels in place editing')) {
+    drupal_add_css(drupal_get_path('module', 'panels_grid_system') . '/css/grid-system-ipe.css');
+    drupal_add_js(drupal_get_path('module', 'panels_grid_system') . '/js/panels-grid-system-ipe.js');
+  }
+  // Add js and CSS to show a grid background as a help to users that have
+  // permission to change pane styles and thereby column spans.
+  if (user_access('administer panels styles')) {
+    drupal_add_css(drupal_get_path('module', 'panels_grid_system') . '/css/grid-system-background.css');
+    drupal_add_js(drupal_get_path('module', 'panels_grid_system') . '/js/panels-grid-system.js');
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function panels_grid_system_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'panels_panel_context_edit_content') {
+    $form['#validate'][] = 'panels_grid_system_validate_display_save';
+  }
+}
+
+/**
+ * Form validator that checks if there are unused rows with panes in the layout.
+ *
+ * @ingroup forms
+ */
+function panels_grid_system_validate_display_save($form, $form_state) {
+  if (isset($form_state['values']['layout_settings']['num_rows']) && isset($form_state['values']['panel']['pane'])) {
+    $rows_chosen = $form_state['values']['layout_settings']['num_rows'];
+    $counter = 1;
+    foreach ($form_state['values']['panel']['pane'] as $pane) {
+      if (!empty($pane) && $counter > $rows_chosen) {
+        form_set_error('num_rows', t('Please delete the panes in the rows you are excluding now. This is for performance reasons since panels cannot know if you want the panes rendered or not, so they will be rendered even if they are not visible in the layout.'));
+      }
+      $counter++;
+    }
+  }
+}
+
+/**
+ * Settings for the layout.
+ *
+ * @ingroup forms
+ */
+function panels_grid_system_layout_settings_form($display, $layout, $layout_settings) {
+  $form['num_rows'] = array(
+    '#type' => 'select',
+    '#title' => t('Number of rows in layout'),
+    '#options' => drupal_map_assoc(range(1, 12)),
+    '#default_value' => (isset($layout_settings['num_rows'])) ? $layout_settings['num_rows'] : 3,
+  );
+  return $form;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function panels_grid_system_theme() {
+  $module_path = drupal_get_path('module', 'panels_grid_system');
+  return array(
+    'panels_grid_system_region_style' => array(
+      'render element' => 'element',
+      'template' => 'panels-grid-system-region-style',
+      'path' => $module_path . '/theme',
+    ),
+  );
+}

@@ -1,0 +1,14 @@
+name = Skinr UI
+description = Administrative interface to skinr. Without this module, you cannot edit your skins.
+package = Skinr
+core = 7.x
+configure = admin/structure/skinr
+dependencies[] = skinr
+files[] = tests/skinr_ui.test
+
+; Information added by Drupal.org packaging script on 2014-05-02
+version = "7.x-2.0-beta1+33-dev"
+core = "7.x"
+project = "skinr"
+datestamp = "1399059832"
+

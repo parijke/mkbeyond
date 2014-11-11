@@ -1,0 +1,34 @@
+From 5f9990759eab33408f0ba6531bba0ad48ed5a6e2 Mon Sep 17 00:00:00 2001
+From: heddn <lucashedding@1463982.no-reply.drupal.org>
+Date: Sat, 14 Sep 2013 16:27:04 -0500
+Subject: Issue #1977406 by heddn: Tere is no Tokens list in the popup.
+
+---
+ token_insert_entity.module |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/token_insert_entity.module b/token_insert_entity.module
+index 7cf70bb..34fc185 100644
+--- a/token_insert_entity.module
++++ b/token_insert_entity.module
+@@ -19,7 +19,7 @@ function token_insert_entity_menu() {
+
+   $items['token_insert_entity/insert'] = array(
+     'page callback' => 'token_insert_entity_form_data',
+-    'access arguments' => array('administer content'),
++    'access arguments' => array('administer nodes'),
+     'delivery callback' => 'token_insert_entity_deliver',
+     'file' => 'token_insert_entity.pages.inc',
+     'type' => MENU_CALLBACK,
+@@ -27,7 +27,7 @@ function token_insert_entity_menu() {
+
+   $items['token_insert_entity/autocomplete'] = array(
+     'page callback' => '_token_insert_entity_autocomplete',
+-    'access arguments' => array('administer content'),
++    'access arguments' => array('administer nodes'),
+     'file' => 'token_insert_entity.pages.inc',
+     'type' => MENU_CALLBACK
+   );
+--
+1.7.10.4
+

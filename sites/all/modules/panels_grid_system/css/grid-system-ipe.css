@@ -1,0 +1,30 @@
+.pgs-ipe-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.pgs-ipe-wrapper .grid-system-column {
+  margin-left: 0;
+  margin-right: 0;
+}
+.pgs-ipe-wrapper + .panel-separator {
+  display: none;
+}
+/**
+ * Because there is a lot of borders and padding going on, we set border-box
+ * on the draggable boxes.
+ */
+div.panels-ipe-editing div.pgs-ipe-wrapper.panels-ipe-portlet-wrapper,
+div.panels-ipe-editing div.pgs-ipe-wrapper.panels-ipe-portlet-wrapper:hover {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+/**
+ * Set content-box to keep the size of the yellow background under draggable
+ * boxes. It collapses into uselessness without this.
+ */
+.panels-ipe-editing .pgs-ipe-wrapper .panels-ipe-sort-container .ui-sortable-placeholder {
+  box-sizing: content-box;
+}

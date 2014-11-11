@@ -1,0 +1,18 @@
+name = Panels Grid System
+description = 'A panel style that allows you to set column span on panes to fit a grid system like 960. Also provides a panels layout you can set the number of rows on.'
+dependencies[] = ctools
+dependencies[] = panels
+dependencies[] = page_manager
+
+package = "Panels"
+
+stylesheets[all][] = css/grid-system-columns.css
+
+core = 7.x
+
+; Information added by Drupal.org packaging script on 2014-04-18
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "panels_grid_system"
+datestamp = "1397848127"
+

@@ -1,0 +1,108 @@
+.grid-system-column {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.grid-system-column + .panel-separator {
+  display: none;
+}
+.overlay-toggler {
+  float: left;
+  position: relative;
+}
+.overlay-toggler a {
+  color: white;
+  background-color: #606060;
+  padding: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 120px;
+}
+
+.pgs-span-1 {
+  width:70px;
+}
+.pgs-span-2 {
+  width:150px;
+}
+.pgs-span-3 {
+  width:230px;
+}
+.pgs-span-4 {
+  width:310px;
+}
+.pgs-span-5 {
+  width:390px;
+}
+.pgs-span-6 {
+  width:470px;
+}
+.pgs-span-7 {
+  width:550px;
+}
+.pgs-span-8 {
+  width:630px;
+}
+.pgs-span-9 {
+  width:710px;
+}
+.pgs-span-10 {
+  width:790px;
+}
+.pgs-span-11 {
+  width:870px;
+}
+.pgs-span-12 {
+  width:950px;
+}
+
+.grid-system-row.pgs-span-1 {
+  margin: auto;
+  width: 80px;
+}
+.grid-system-row.pgs-span-2 {
+  margin: auto;
+  width: 160px;
+}
+.grid-system-row.pgs-span-3 {
+  margin: auto;
+  width: 240px;
+}
+.grid-system-row.pgs-span-4 {
+  margin: auto;
+  width: 320px;
+}
+.grid-system-row.pgs-span-5 {
+  margin: auto;
+  width: 400px;
+}
+.grid-system-row.pgs-span-6 {
+  margin: auto;
+  width: 480px;
+}
+.grid-system-row.pgs-span-7 {
+  margin: auto;
+  width: 560px;
+}
+.grid-system-row.pgs-span-8 {
+  margin: auto;
+  width: 640px;
+}
+.grid-system-row.pgs-span-9 {
+  margin: auto;
+  width: 720px;
+}
+.grid-system-row.pgs-span-10 {
+  margin: auto;
+  width: 800px;
+}
+.grid-system-row.pgs-span-11 {
+  margin: auto;
+  width: 880px;
+}
+.grid-system-row.pgs-span-12 {
+  margin: auto;
+  width: 960px;
+}

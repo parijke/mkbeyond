@@ -1,0 +1,9 @@
+.grid-system-background-grid .grid-system-column {
+  background-color: rgba(30, 144, 255, 0.2);
+}
+.grid-system-background-grid {
+  background-image: url(../img/grid.png);
+}
+.panels-ipe-editing .grid-system-background-grid .grid-system-column {
+  background-color: transparent;
+}

@@ -1,0 +1,5 @@
+Panels Grid System
+
+panels_grid_system 7.x-1.x-dev
+==================
+Issue #2228883 by jiff: Pgsrows layout prints wrapper markup for empty regions.

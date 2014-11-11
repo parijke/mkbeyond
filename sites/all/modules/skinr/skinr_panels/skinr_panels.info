@@ -1,0 +1,14 @@
+name = Skinr Panels
+description = Provides Skinr integration with Panels.
+package = Skinr
+core = 7.x
+dependencies[] = panels (>=3.4)
+
+files[] = tests/skinr_panels.test
+
+; Information added by Drupal.org packaging script on 2014-05-02
+version = "7.x-2.0-beta1+33-dev"
+core = "7.x"
+project = "skinr"
+datestamp = "1399059832"
+

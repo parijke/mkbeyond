@@ -1,0 +1,25 @@
+diff --git a/bootstrap_carousel.module b/bootstrap_carousel.module
+index 3f35d04..5fb89f3 100644
+--- a/bootstrap_carousel.module
++++ b/bootstrap_carousel.module
+@@ -272,12 +272,14 @@ function bootstrap_carousel_node_view($node, $view_mode, $langcode) {
+ function bootstrap_carousel_ctools_render_alter(&$info, &$page, &$context) {
+   $is_carousel = FALSE;
+   if ($page) {
+-    foreach ($context['handler']->conf['display']->content as $id => $panel_content) {
+-      if ($panel_content->type == 'node') {
+-        $node = node_load($panel_content->configuration['nid']);
+-        if ($node->type == 'bootstrap_carousel') {
+-          _bootstrap_carousel_load_javascript($node);
+-          _bootstrap_carousel_load_css();
++    if (isset($context['handler']->conf['display']->content)) {
++      foreach ($context['handler']->conf['display']->content as $id => $panel_content) {
++        if ($panel_content->type == 'node') {
++          $node = node_load($panel_content->configuration['nid']);
++          if ($node->type == 'bootstrap_carousel') {
++            _bootstrap_carousel_load_javascript($node);
++            _bootstrap_carousel_load_css();
++          }
+         }
+       }
+     }

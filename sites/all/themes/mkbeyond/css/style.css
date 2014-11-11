@@ -1,0 +1,151 @@
+/**
+ * Styles for the MKBeyond theme.
+ */
+@import url(//fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800);
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css);
+
+html, body {
+  color: black;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.pull-center {
+text-align: center;
+}
+
+.navbar-btn {
+margin-top: 3px;
+margin-bottom: 3px;
+}
+
+.navbar-nav>li>a {
+padding-top: 31px;
+padding-bottom: 31px;
+}
+
+.navbar-default {
+background-color: #fff;
+}
+
+ul.menu li.leaf {
+font-size: 14px;
+text-transform: uppercase;
+font-weight: 600;	
+}
+
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+color: #F8941C;
+background:transparent ;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+color: #F8941C;
+}
+
+.navbar {
+position: relative;
+min-height: 50px;
+margin-bottom: 0px;
+border: 0px solid transparent;
+}
+
+/* flexslider overrodes */
+.flexslider { 
+	margin: 0; 
+	background: #fff; 
+	border: 0px solid #fff; 
+	position: relative; 
+	-webkit-border-radius: 0px; 
+	-moz-border-radius: 0px; 
+	-o-border-radius: 0px; 
+	border-radius: 0px; 
+	-webkit-box-shadow: 0 0px 0px rgba(0,0,0,.2); 
+	-moz-box-shadow: 0 0px 0px rgba(0,0,0,.2); 
+	-o-box-shadow: 0 0px 0px rgba(0,0,0,.2); 
+	box-shadow: 0 0px 0px rgba(0,0,0,.2); 
+	zoom: 1; 
+}
+
+.flexslider .slides img {
+	min-height: 400px;
+}
+
+.flex-control-nav {
+bottom: 10px;
+z-index: 9999;
+}
+
+#page-header > .well {
+padding: 0;
+border:0;
+}
+
+#home i.fa {
+	font-size:90px;
+	color:#F8941C;
+}
+
+div.main-container.container #home {
+	text-align: center;
+}
+
+#footer-div {
+	background: #333333;
+	color: #eeeeee;
+	font-size: 0.8em; 
+}
+
+.twitter-status {
+background: inherit;
+color: inherit;
+padding: 0;
+margin-bottom: 0;
+font-size: inherit;
+}
+
+.twitter-status .name-handle .name a {
+color: inherit;
+}
+
+.region-footer {
+border-top: none; 
+}
+
+#home .row {
+	padding-top:20px;
+}
+
+div#slideshow-title {
+font-family: 'Open Sans', sans-serif;
+position: absolute;
+top: 10%;
+left: auto;
+right:auto;
+text-transform: uppercase;
+font-size: 2.5em;
+font-weight: 800;
+width: 400px;
+line-height: 1;
+color: white;
+}
+
+div#slideshow-body {
+position: absolute;
+top: 35%;
+left: auto;
+right:auto;
+width: 400px;
+line-height: 1;
+color: white;
+}
+
+div#slideshow-link {
+position: absolute;
+top: 70%;
+left: auto;
+right:auto;
+}
