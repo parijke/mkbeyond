@@ -2,6 +2,20 @@
  * Kalatheme (http://drupal.org/project/kalatheme) 
  */ 
 
+ #home i.fa {
+	font-size:90px;
+	color:#F8941C;
+}
+
+#home .panel-pane.pane-custom {
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+#home .panel-pane {
+	text-align:center;
+}
+
 section.section {
 background: #333333;
 color: lightgrey;
